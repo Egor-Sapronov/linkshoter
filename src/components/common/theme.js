@@ -1,0 +1,25 @@
+export default {
+  grid: '8px',
+  calcGrid: count => `${8 * count}px`,
+  borderRadius: '3px',
+  colors: {
+    accentColor: '#EB4A42',
+    primaryTextColor: '#555555',
+    secondaryTextColor: '#AAAAAA',
+    unimportantTextColor: '#CCCCCC',
+    disabledTextColor: '#BFBFBF',
+    lightBackgroundColor: '#EAEAEA',
+    disabledBackgroundColod: '#E0E0E0',
+    whiteColor: '#FFFFFF',
+  },
+  font: {
+    fontSizeMd: '16px',
+    fontSizeSm: '14px',
+    fontSizeLg: '22px',
+    fontSizeHeader: '47px',
+    fontFamilyMain: 'Roboto',
+    fontFamilyHeading: 'Montserrat',
+    fontWeightRegular: 300,
+    fontWeightLight: 100,
+  },
+};
