@@ -87,9 +87,9 @@ App has one point of state — data from shortening API.
 
 ### Side effects handling
 
-There are two side effects points: saving history to localStorage and API calls. [History epic](./src/epics/history.epic.js) saves (Links)[./src/reducers/entities/links.reducer.js] on every action which mean that there are new links in state. (Links epic)[./src/epics/shortLink.epic.js] and (Stats epic)[./src/epics/stats.epic.js] download data from API.
+There are two side effects points: saving history to localStorage and API calls. [History epic](./src/epics/history.epic.js) saves [Links](./src/reducers/entities/links.reducer.js) on every action which mean that there are new links in state. [Links epic](./src/epics/shortLink.epic.js) and [Stats epic](./src/epics/stats.epic.js) download data from API.
 
-Important point is that epics don't deal directly with localStorage and API. All this logic moved to services in (tools)[./src/tools] and passed to epics as dependencies.
+Important point is that epics don't deal directly with localStorage and API. All this logic moved to services in [tools](./src/tools) and passed to epics as dependencies.
 ```
 export const statsByLink =
   (action$, store, { apiService: { getLinkStats }, responseParseService }) =>
