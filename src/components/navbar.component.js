@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './common/header.component';
-import SubHeader from './common/subHeader.component';
+import UnimportantText from './common/unimportantText.component';
 import Flex from './common/flex.component';
 
 export default () => (
@@ -8,8 +8,8 @@ export default () => (
     <Header>
       Shooooort
     </Header>
-    <SubHeader>
+    <UnimportantText>
       The link shortener with a long name
-    </SubHeader>
+    </UnimportantText>
   </Flex>
 );

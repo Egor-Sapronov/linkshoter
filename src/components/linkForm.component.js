@@ -18,7 +18,6 @@ class LinkForm extends Component {
 
     this.state = {
       link: '',
-      isReadyToShort: false,
     };
 
     this.handleLinkChange = this.handleLinkChange.bind(this);
@@ -29,7 +28,6 @@ class LinkForm extends Component {
     this.setState({
       ...this.state,
       link: event.target.value,
-      isReadyToShort: checkLinkValid(event.target.value),
     });
   }
 
@@ -39,8 +37,11 @@ class LinkForm extends Component {
     this.setState({
       ...this.state,
       link: '',
-      isReadyToShort: false,
     });
+  }
+
+  get isReadyToShort() {
+    return checkLinkValid(this.state.link);
   }
 
   render() {
@@ -52,7 +53,7 @@ class LinkForm extends Component {
           placeholder="Paste the link you want to shorten"
         />
         <Button
-          disabled={!this.state.isReadyToShort}
+          disabled={!this.isReadyToShort}
           onClick={this.handleButtonClick}
         >
           Shorten this link

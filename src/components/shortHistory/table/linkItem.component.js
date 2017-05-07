@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import CopyToClipboard from 'react-copy-to-clipboard'
+import CopyToClipboard from 'react-copy-to-clipboard';
 import config from '../../../config';
 import { link } from './../shortHistory.props';
 import Flex from '../../common/flex.component';
 import AccentLink from '../../common/accentLink.component';
-import BaseLink from '../../common/baseLink.component';
+import UnimportantText from '../../common/unimportantText.component';
 import Action from '../../common/action.component';
 
 class LinkItem extends Component {
@@ -65,7 +65,7 @@ class LinkItem extends Component {
             </CopyToClipboard>
           }
         </Flex>
-        <BaseLink>{this.props.link.link}</BaseLink>
+        <UnimportantText>{this.props.link.link}</UnimportantText>
       </Flex>
     );
   }

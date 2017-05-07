@@ -8,8 +8,8 @@ const Flex = styled.div`
 `;
 
 Flex.defaultProps = {
-  'justify-content': 'flex-start',
-  'align-items': 'stretch',
+  justify: 'flex-start',
+  align: 'stretch',
   layout: 'column',
 };
 

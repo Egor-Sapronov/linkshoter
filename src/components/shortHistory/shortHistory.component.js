@@ -12,6 +12,7 @@ import { linksList } from './shortHistory.props';
 class ShortHistory extends Component {
   render() {
     const isHistoryExists = !isEmpty(this.props.links);
+
     return isHistoryExists && (
       <Flex>
         <ShortHistoryHeader

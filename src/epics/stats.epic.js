@@ -8,7 +8,7 @@ export const statsByLink =
       .mergeMap(action => getLinkStats(action.shortcode)
         .map(response => response.status === 200
           ? shortcodeStatsSuccess(
-            responseParseService.patseLinkStats(response),
+            responseParseService.parseLinkStats(response),
             action.shortcode,
           )
           : shortcodeStatsFail(),
@@ -22,7 +22,7 @@ export const statsFromHistory =
         .mergeMap(shortcode => getLinkStats(shortcode)
           .map(response => response.status === 200
             ? shortcodeStatsSuccess(
-              responseParseService.patseLinkStats(response),
+              responseParseService.parseLinkStats(response),
               shortcode,
             )
             : shortcodeStatsFail(),

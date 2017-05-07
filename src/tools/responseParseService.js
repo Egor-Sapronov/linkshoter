@@ -2,7 +2,7 @@ export default {
   parseShortLink(response) {
     return response.response.shortcode;
   },
-  patseLinkStats(response) {
+  parseLinkStats(response) {
     return {
       redirectCount: response.response.redirectCount,
       lastSeenDate: response.response.lastSeenDate,
